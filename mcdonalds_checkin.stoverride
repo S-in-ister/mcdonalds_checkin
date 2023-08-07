@@ -1,0 +1,47 @@
+#SUBSCRIBED http://script.hub/file/_start_/
+https://github.com/Black-Magic-Lab/Surge/
+blob/master/modules/mcdonalds.sgmodule/_end_/
+mcdonalds.stoverride?type=surge-
+module&target=stash-stoverride
+name: "麥當勞每日自動簽到"
+desc: "每天自動簽到 + 幸運轉盤 + 填問卷 + 看影片。"
+
+cron:
+  script:
+
+#   - name: "[麥當勞]自動簽到"
+#     cron: "13 0 * * *"
+#     timeout: 5
+
+    - name: "[麥當勞]自動簽到"
+      cron: "13 0 * * *"
+      timeout: 5
+
+    - name: "[麥當勞]幸運轉盤"
+      cron: "14 0 * * *"
+      timeout: 10
+
+    - name: "[麥當勞]填問卷"
+      cron: "14 0 * * 3,6"
+      timeout: 10
+    
+    - name: "[麥當勞]看影片"
+      cron: "15 0 * * 3,6"
+      timeout: 30
+      
+script-providers:
+# "[麥當勞]自動簽到":
+#   url: https://kinta.ma/surge/scripts/mcdonalds_checkin.js
+#   interval: 86400
+  "[麥當勞]自動簽到":
+    url: https://kinta.ma/surge/scripts/mcdonalds_checkin.js
+    interval: 86400
+  "[麥當勞]幸運轉盤":
+    url: https://kinta.ma/surge/scripts/mcdonalds_luckydraw.js
+    interval: 86400
+  "[麥當勞]填問卷":
+    url: https://kinta.ma/surge/scripts/mcdonalds_question.js
+    interval: 86400
+  "[麥當勞]看影片":
+    url: https://kinta.ma/surge/scripts/mcdonalds_media_checkin.js
+    interval: 86400
