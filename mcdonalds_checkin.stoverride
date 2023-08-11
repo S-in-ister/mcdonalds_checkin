@@ -13,7 +13,7 @@ cron:
       timeout: 5
 
     - name: "[麥當勞]幸運轉盤"
-      cron: "16 10 * * *"
+      cron: "14 0 * * *"
       timeout: 10
 
     - name: "[麥當勞]填問卷"
