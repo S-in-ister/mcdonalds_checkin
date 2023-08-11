@@ -1,8 +1,3 @@
-#SUBSCRIBED http://script.hub/file/_start_/
-https://github.com/Black-Magic-Lab/Surge/
-blob/master/modules/mcdonalds.sgmodule/_end_/
-mcdonalds.stoverride?type=surge-
-module&target=stash-stoverride
 name: "麥當勞每日自動簽到"
 desc: "每天自動簽到 + 幸運轉盤 + 填問卷 + 看影片。"
 
